@@ -1,0 +1,15 @@
+h1.text-center Sebone&nbsp;
+  span.glyphicon.glyphicon-comment
+hr
+form.form-horizontal(role='form', data-js='new')
+  .form-group
+    label.col-sm-2.control-label(for='board-new-input') 新しい掲示板
+    .col-sm-8
+      input#board-new-input.form-control(type='text', placeholder='新しい掲示板名を入力', data-js='new_name')
+      .text-danger(data-js='invalid')
+  .form-group
+    .col-sm-offset-2.col-sm-8
+      input.btn.btn-default.pull-right(type='submit', value='保存')
+.row
+  .col-sm-offset-2.col-sm-8
+    .list-group(data-js='index')

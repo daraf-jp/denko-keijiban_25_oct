@@ -1,0 +1,23 @@
+h1.text-center
+  span.glyphicon.glyphicon-comment
+  = ' ' + board.get('name')
+hr
+form.form-horizontal(role='form', data-js='new')
+  .form-group
+    label.col-sm-2.control-label(for='new-name-input') お名前
+    .col-sm-4
+      input#new-name-input.form-control(type='text', placeholder='あなたの名前', data-js='new_name', value='名無し')
+  .form-group
+    label.col-sm-2.control-label(for='new-content-input') 新しいコメント
+    .col-sm-8
+      textarea#new-content-input.form-control(placeholder='新しいコメント', rows='5', data-js='new_content')
+      .text-danger(data-js='invalid')
+  .form-group
+    .col-sm-offset-2.col-sm-8
+      button.btn.btn-default.pull-right(type='submit') 保存
+.row
+  .col-sm-offset-2.col-sm-8
+    ul.media-list(data-js='index')
+a.col-sm-offset-2.btn.btn-default.pull-left(type='button', href='#')
+  span.glyphicon.glyphicon-chevron-left
+  = ' 戻る'

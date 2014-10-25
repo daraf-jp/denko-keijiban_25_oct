@@ -1,0 +1,5 @@
+.media-body
+  h4.media-heading
+    = comment.get('name')
+    span.pull-right= comment.get('created_at')
+  = comment.get('content')
