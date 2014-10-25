@@ -9,5 +9,5 @@ class Dk.Views.Comments.IndexView extends Backbone.View
     @comments.each (comment) => @renderComment(comment)
 
   renderComment: (comment) ->
-    showView = new ShowView({comment: comment})
+    showView = new Dk.Views.Comments.ShowView({comment: comment})
     @$el.append showView.render().el
