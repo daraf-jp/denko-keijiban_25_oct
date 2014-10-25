@@ -17,5 +17,6 @@ class Dk.Views.Boards.NewView extends Backbone.View
     @$('[data-js=new_name]').val('')
 
     @$('[data-js=invalid]').empty()
-    if board.isValid()
-      @boards.add board
+    board.save {},
+      success: (b) =>
+        @boards.add board
