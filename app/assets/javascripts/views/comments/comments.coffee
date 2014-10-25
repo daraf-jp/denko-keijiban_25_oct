@@ -7,4 +7,4 @@ class Dk.Views.Comments.CommentsView extends Backbone.View
   renderComments: ->
     @$el.html template board: @board
     new Dk.Views.Comments.NewView el: $('[data-js=new]'), comments: @comments
-    new IndexView el: $('[data-js=index]'), comments: @comments
+    new Dk.Views.Comments.IndexView el: $('[data-js=index]'), comments: @comments

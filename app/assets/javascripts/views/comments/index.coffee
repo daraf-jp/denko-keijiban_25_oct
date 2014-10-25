@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'views/comments/show'], ($, Backbone, ShowView) ->
-  class IndexView extends Backbone.View
+  class Dk.Views.Comments.IndexView extends Backbone.View
     initialize: (options) ->
       @comments = options.comments
       @comments.on 'add', (comment) => @renderComment(comment)
