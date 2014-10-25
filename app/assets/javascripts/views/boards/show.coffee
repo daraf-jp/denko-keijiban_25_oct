@@ -43,8 +43,9 @@ class Dk.Views.Boards.ShowView extends Backbone.View
     @board.set name: @$('[data-js=edit_name]').val()
 
     @$('[data-js=invalid]').val('')
-    if @board.isValid()
-      @$el.html @templateShow(board: @board)
+    @board.save {},
+      success: =>
+        @$el.html @templateShow(board: @board)
 
   cancel: (e) ->
     e.preventDefault()
