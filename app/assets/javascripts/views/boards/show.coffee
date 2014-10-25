@@ -1,4 +1,7 @@
 class Dk.Views.Boards.ShowView extends Backbone.View
+  templateShow: JST['boards/show']
+  templateEdit: JST['boards/edit']
+
   className: 'list-group-item'
   tagName: 'a'
 
@@ -15,7 +18,7 @@ class Dk.Views.Boards.ShowView extends Backbone.View
       @$('[data-js=invalid]').text error
 
   render: ->
-    @$el.html templateShow(board: @board)
+    @$el.html @templateShow(board: @board)
     @$el.attr 'href', '#' + @board.cid
     @
 
@@ -31,7 +34,7 @@ class Dk.Views.Boards.ShowView extends Backbone.View
     e.preventDefault()
     e.stopPropagation()
 
-    @$el.html templateEdit(board: @board)
+    @$el.html @templateEdit(board: @board)
 
   done: (e) ->
     e.preventDefault()
@@ -41,13 +44,13 @@ class Dk.Views.Boards.ShowView extends Backbone.View
 
     @$('[data-js=invalid]').val('')
     if @board.isValid()
-      @$el.html templateShow(board: @board)
+      @$el.html @templateShow(board: @board)
 
   cancel: (e) ->
     e.preventDefault()
     e.stopPropagation()
 
-    @$el.html templateShow(board: @board)
+    @$el.html @templateShow(board: @board)
 
 
   prevent: (e) ->
