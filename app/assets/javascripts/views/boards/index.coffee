@@ -8,5 +8,5 @@ class Dk.Views.Boards.IndexView extends Backbone.View
       @renderBoard(board)
 
   renderBoard: (board) ->
-    view = new ShowView(board: board)
+    view = new Dk.Views.Boards.ShowView(board: board)
     @$el.append view.render().el

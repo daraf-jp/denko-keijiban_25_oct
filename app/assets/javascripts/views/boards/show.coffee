@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'templates/boards/show', 'templates/boards/edit'], ($, Backbone, templateShow, templateEdit) ->
-  class ShowView extends Backbone.View
+  class Dk.Views.Boards.ShowView extends Backbone.View
     className: 'list-group-item'
     tagName: 'a'
 
