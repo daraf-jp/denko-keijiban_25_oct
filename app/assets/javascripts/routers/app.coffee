@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'views/boards/boards', 'views/comments/comments'], ($, Backbone, BoardsView, CommentsView) ->
-  class AppRouter extends Backbone.Router
+  class Dk.Routers.AppRouter extends Backbone.Router
     routes:
       ':cid' : 'renderComments'
       ''    : 'renderBoards'
