@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'models/comment', 'collections/comments', 'backbone_relational'], ($, Backbone, Comment, Comments) ->
-  class Board extends Backbone.RelationalModel
+  class Dk.Models.Board extends Backbone.RelationalModel
     relations: [{
       type: Backbone.HasMany
       key: 'comments'
@@ -17,4 +16,4 @@ define ['jquery', 'backbone', 'models/comment', 'collections/comments', 'backbon
       if attrs.name.length is 0
         '掲示板名が未入力です'
 
-  Board.setup()
+  Dk.Models.Board.setup()
