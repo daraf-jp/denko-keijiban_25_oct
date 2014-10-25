@@ -2,8 +2,8 @@ class Dk.Models.Board extends Backbone.RelationalModel
   relations: [{
     type: Backbone.HasMany
     key: 'comments'
-    relatedModel: Comment
-    collectionType: Comments
+    relatedModel: 'Dk.Models.Comment'
+    collectionType: Dk.Collections.Comments
     reverseRelation:
       key: 'board'
       includeInJSON: true
