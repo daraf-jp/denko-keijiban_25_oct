@@ -9,7 +9,7 @@ class Dk.Views.Comments.NewView extends Backbone.View
     e.preventDefault()
     e.stopPropagation()
 
-    comment = new Comment()
+    comment = new Dk.Models.Comment()
     @listenTo comment, 'invalid', (model, error) =>
       @$('[data-js=invalid]').text error
 
