@@ -1,3 +1,2 @@
-define ['jquery', 'backbone', 'models/board'], ($, Backbone, Board) ->
-  class Boards extends Backbone.Collection
+  class Dk.Collections.Boards extends Backbone.Collection
     model: Board
