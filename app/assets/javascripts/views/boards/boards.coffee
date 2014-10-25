@@ -7,5 +7,5 @@ class Dk.Views.Boards.BoardsView extends Backbone.View
 
   renderBoards: ->
     @$el.html @template()
-    new NewView(el: @$('[data-js=new]'), boards: @boards)
+    new Dk.Views.Boards.NewView(el: @$('[data-js=new]'), boards: @boards)
     new IndexView(el: @$('[data-js=index]'), boards: @boards)
