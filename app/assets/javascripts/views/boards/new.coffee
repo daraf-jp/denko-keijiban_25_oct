@@ -9,7 +9,7 @@ class Dk.Views.Boards.NewView extends Backbone.View
     e.stopPropagation()
     e.preventDefault()
 
-    board = new Board()
+    board = new Dk.Models.Board()
     @listenTo board, 'invalid', (model, error) =>
       @$('[data-js=invalid]').text error
 
