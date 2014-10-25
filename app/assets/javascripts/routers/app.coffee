@@ -10,7 +10,7 @@ class Dk.Routers.AppRouter extends Backbone.Router
     @renderBoards()
 
   renderBoards: ->
-    new BoardsView el: @$el, boards: @boards
+    new Dk.Views.Boards.BoardsView el: @$el, boards: @boards
 
   renderComments: (id) ->
     board = @boards.get(id)

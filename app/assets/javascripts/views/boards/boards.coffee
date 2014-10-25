@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'templates/boards/boards', 'views/boards/new', 'views/boards/index'], ($, Backbone, template, NewView, IndexView) ->
-  class BoardsView extends Backbone.View
+  class Dk.Views.Boards.BoardsView extends Backbone.View
     initialize: (options) ->
       @boards = options.boards
       @renderBoards()
