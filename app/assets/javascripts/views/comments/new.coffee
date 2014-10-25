@@ -20,8 +20,9 @@ class Dk.Views.Comments.NewView extends Backbone.View
       content: @$('[data-js=new_content]').val()
 
     @$('[data-js=invalid]').empty()
-    if comment.isValid()
-      @$('[data-js=new_name]').val('名無し')
-      @$('[data-js=new_content]').val('')
+    comment.save {},
+      success: =>
+        @$('[data-js=new_name]').val('名無し')
+        @$('[data-js=new_content]').val('')
 
-      @comments.add comment
+        @comments.add comment
