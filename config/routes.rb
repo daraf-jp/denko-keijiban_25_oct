@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-
-  resources :boards
+  resources :boards, format: :json do
+    resources :comments, only: [:create, :show]
+  end
 
   root 'application#index'
 
