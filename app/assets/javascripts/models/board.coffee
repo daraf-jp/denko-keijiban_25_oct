@@ -9,6 +9,8 @@ class Dk.Models.Board extends Backbone.RelationalModel
       includeInJSON: true
   }]
 
+  urlRoot: '/boards/'
+
   defaults:
     name: ''
 
