@@ -11,6 +11,11 @@ class Dk.Models.Comment extends Backbone.RelationalModel
     content: ''
     created_at: ''
 
+  toJSON: ->
+    comment:
+      name: @get('name')
+      content: @get('content')
+
   validate: (attrs) ->
     if attrs.content.length is 0
       'コメントが未入力です'
