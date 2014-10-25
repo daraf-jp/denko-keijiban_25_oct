@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'models/comment'], ($, Backbone, Comment) ->
-  class NewView extends Backbone.View
+  class Dk.Views.Comments.NewView extends Backbone.View
     events:
       'submit' : 'submit'
 
