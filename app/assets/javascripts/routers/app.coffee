@@ -15,6 +15,6 @@ class Dk.Routers.AppRouter extends Backbone.Router
   renderComments: (id) ->
     board = @boards.get(id)
     if board?
-      new CommentsView el: @$el, board: board
+      new Dk.Views.Comments.CommentsView el: @$el, board: board
     else
       location.assign '#'

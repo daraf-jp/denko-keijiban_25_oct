@@ -1,5 +1,4 @@
-define ['jquery', 'backbone', 'templates/comments/comments', 'views/comments/new', 'views/comments/index'], ($, Backbone, template, NewView, IndexView) ->
-  class CommentsView extends Backbone.View
+  class Dk.Views.Comments.CommentsView extends Backbone.View
     initialize: (options) ->
       @board = options.board
       @comments = @board.get('comments')
