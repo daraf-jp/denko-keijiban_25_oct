@@ -6,8 +6,6 @@ class Dk.Routers.AppRouter extends Backbone.Router
   initialize: (options) ->
     @$el = options.$el
     @boards = options.boards
-    location.assign '#'
-    @renderBoards()
 
   renderBoards: ->
     new Dk.Views.Boards.BoardsView el: @$el, boards: @boards
