@@ -3,6 +3,9 @@
 :coffeescript
   $ ->
     boards = new Dk.Collections.Boards()
-    new Dk.Routers.AppRouter($el: $('[data-js=app]'), boards: boards)
-    Backbone.history ||= new Backbone.History({})
-    Backbone.history.start()
+    boards.fetch
+      success: ->
+        new Dk.Routers.AppRouter($el: $('[data-js=app]'), boards: boards)
+        unless Backbone.history.started
+          Backbone.history ||= new Backbone.History({})
+          Backbone.history.start()
