@@ -18,4 +18,8 @@ class Dk.Models.Board extends Backbone.RelationalModel
     if attrs.name.length is 0
       '掲示板名が未入力です'
 
+  toJSON: ->
+    board:
+      name: @get('name')
+
 Dk.Models.Board.setup()
